@@ -11,7 +11,7 @@ const { Builder } = require('selenium-webdriver');
     await driver.getWindowHandle();
 
     const originalWindow = await driver.getWindowHandle();
-
+//assert?
     //Check we don't have other windows open already
     assert((await driver.getAllWindowHandles()).length === 1);
 
@@ -41,5 +41,6 @@ const { Builder } = require('selenium-webdriver');
 
     // Opens a new window and switches to new window
     await driver.switchTo().newWindow('window');
+
 
 })();
